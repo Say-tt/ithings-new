@@ -269,8 +269,8 @@ export default {
     });
   },
 
-  'GET  /api/login/captcha': getFakeCaptcha,
-  'POST /api/v1/system/user/login': postV1SystemUserLogin,
-  'POST /api/v1/system/user/read': postV1SystemUserInfoIndex,
-  'POST /api/v1/system/user/captcha': postV1SystemUserCaptcha,
+  // 'GET  /api/login/captcha': getFakeCaptcha,
+  // 'POST /api/v1/system/user/login': postV1SystemUserLogin,
+  // 'POST /api/v1/system/user/read': postV1SystemUserInfoIndex,
+  // 'POST /api/v1/system/user/captcha': postV1SystemUserCaptcha,
 };

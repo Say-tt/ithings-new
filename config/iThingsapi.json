@@ -3319,7 +3319,7 @@
         "x-run-in-apifox": "https://apifox.com/web/project/2655100/apis/api-78232598-run"
       }
     },
-    "/api/v1/system/user/login": {
+    "/api/v1/system/Login": {
       "post": {
         "summary": "登录",
         "x-apifox-folder": "iThings-apisvr/系统管理/用户管理",

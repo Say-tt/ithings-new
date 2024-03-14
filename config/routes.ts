@@ -17,6 +17,24 @@ export default [
       },
     ],
   },
+  // {
+  //   path: '/',
+  //   routes: [
+  //     {
+  //       path: '/Login',
+  //       layout: false,
+  //       name: 'login',
+  //       component: './user/Login',
+  //     },
+  //     {
+  //       path: '/Login',
+  //       redirect: '/Login',
+  //     },
+  //     {
+  //       component: '404',
+  //     },
+  //   ],
+  // },
   {
     path: '/',
     component: '../layouts/BasicLayout',

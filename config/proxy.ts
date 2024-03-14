@@ -9,12 +9,12 @@
 export default {
   dev: {
     '/api/': {
-       target: 'http://42.193.250.251:7777',
-      // target: 'http://127.0.0.1:7777',
+      //  target: 'http://42.193.250.251:7777',
+      target: 'http://127.0.0.1:8001',
       //target: 'http://47.92.240.210:8099',
       // target: 'http://43.143.227.15:7777',
       changeOrigin: true,
-      pathRewrite: { '^/api': '/api' },
+      pathRewrite: { '^/api/v1/system': '' },
     },
   },
   test: {

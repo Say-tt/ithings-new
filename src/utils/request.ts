@@ -68,6 +68,8 @@ const redirectLoginPage = () => {
     redirect: window.location.href,
   });
   history.push(`/user/login?${queryString}`);
+  //history.push(`/Login?${queryString}`);
+
 };
 
 // 请求拦截
@@ -99,7 +101,9 @@ const responseInterceptors = (response: any) => {
     localStorage.setItem('iThingsSetToken', '');
   }
 
-  if (response.status === 401 && window.location.pathname !== '/user/login') {
+  // if (response.status === 401 && window.location.pathname !== '/user/login') {
+  if (response.status === 401 && window.location.pathname !== '/Login') {
+
     setToken('');
     setUID('');
     return redirectLoginPage();

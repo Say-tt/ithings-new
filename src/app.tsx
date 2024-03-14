@@ -7,6 +7,7 @@ import { loadBMap } from './utils/map';
 import { getToken, getUID, setLocal, spanTree } from './utils/utils';
 
 const loginPath = '/user/login';
+// const loginPath = '/Login';
 
 const loopMenuItem = (menus: any[]): MenuDataItem[] =>
   menus.map(({ icon, children, hideInMenu, ...item }) => {
@@ -47,18 +48,18 @@ export async function getInitialState(): Promise<{
       if (!token || !userID) {
         return history.push(loginPath);
       }
-      const resourece = await postApiV1SystemUserResourceRead({});
-      const { data } = await postApiV1SystemCommonConfig({});
-      setLocal(`mapData`, JSON.stringify(data));
-      loadBMap();
-      const menuInfo = loopMenuItem(
-        spanTree(
-          resourece?.data?.menu?.sort((a, b) => (a.order as number) - (b.order as number)),
-          1,
-          'parentID',
-        ),
-      );
-      return { userInfo: resourece.data.info, menuInfo };
+      // const resourece = await postApiV1SystemUserResourceRead({});
+      // const { data } = await postApiV1SystemCommonConfig({});
+      // setLocal(`mapData`, JSON.stringify(data));
+      // loadBMap();
+      // const menuInfo = loopMenuItem(
+      //   spanTree(
+      //     resourece?.data?.menu?.sort((a, b) => (a.order as number) - (b.order as number)),
+      //     1,
+      //     'parentID',
+      //   ),
+      // );
+      // return { userInfo: resourece.data.info, menuInfo };
     } catch (error) {
       history.push(loginPath);
     }
